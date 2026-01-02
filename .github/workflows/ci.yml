@@ -7,14 +7,15 @@ on:
     branches: [ main ]
 
 jobs:
-   test:
+  build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@tv3
 
       - name: Build Docker image
-        run: docker build -t myapp .
+        run: docker build -t myapp
 
       - name: Run Docker container
-        run: docker run myapp
+        run: docker run myapp 
